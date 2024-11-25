@@ -51,3 +51,14 @@ Then run it with:
 ```
 ./run_linux.sh
 ```
+
+## Error: Could noot find module '...'
+- Open the terminal and go to the project-path.
+- run 
+```
+ghci -v Main.hs
+```
+after that you can exit with:
+```
+:quit
+```
