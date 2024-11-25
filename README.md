@@ -1,20 +1,53 @@
-# Project Name
+# Functional Programing - Project
 
-## Description
-This project reads a large text file (e.g., 'War and Peace') and builds a persistent red-black tree with unique words, storing them in sorted order.
+Winter Semester 2024 - 5th Semester of BIF
 
-## Features
-- Reads and tokenizes a text file
-- Builds a red-black tree of unique words
-- Outputs sorted words to `output.txt`
-- Supports large text files with parallel processing
+Members:
+- Luca Carpentieri
+- Vladan Petkovic
 
-## Usage
-Compile the program:
-```bash
-ghc -o uniquesorted main.hs -package containers
+## Project description (copied from FHTW-slides)
+- Implement an application
+    - Which, given a path to a text file on the disk, computes the sorted list of
+unique words in this file using a red-black tree.
+- So:
+    - The application has one command line argument: the path to the text file to
+be analyzed (for example, war and peace.txt)
+    - The program reads the content, tokenizes it, and inserts it into a red-black
+tree.
+    - It then traverses this tree to get the unique words in sorted order.
+    - The output is written to file „output.txt“.
+
+## Usage with Makefile
+Build the program with (ensure, that a bin-folder exists):
 ```
-Run the program:
-```bash
-./uniquesorted data/war_and_piece.txt
+make
+```
+Run the program with:
+```
+bin/sort data/test.txt
+```
+or:
+```
+bin/sort data/war_and_piece.txt
+```
+
+and clean everything up with:
+```
+make clean
+```
+
+## Usage with script-files
+
+### Windows
+double-click the run_win.bat-file.
+
+### Linux
+Under linux, make the script executable by running:
+```
+chmod +x run_linux.sh
+```
+Then run it with:
+```
+./run_linux.sh
 ```
