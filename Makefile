@@ -3,7 +3,7 @@ GHC_FLAGS = -package containers -outputdir bin
 
 BIN_DIR = bin
 
-SRC_FILES = src/Main.hs src/RBTree.hs
+SRC_FILES = src/Main.hs src/RBTree.hs src/Helperfunctions.hs
 EXEC = $(BIN_DIR)/sort
 
 .PHONY: all clean run
