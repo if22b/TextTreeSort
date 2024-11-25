@@ -1,5 +1,5 @@
 @echo off
-ghc -o sort src/main.hs -package containers
+ghc -o sort src/Main.hs src/RBTree.hs -package containers
 
 .\sort data\war_and_piece.txt
 
