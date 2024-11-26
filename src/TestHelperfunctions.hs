@@ -1,7 +1,7 @@
 module Main where
 
-import Helperfunctions
-import Test.QuickCheck
+import Helperfunctions ( parallelTokenize, tokenize )
+import Test.QuickCheck ( quickCheck )
 import Data.Char (isLower)
 
 -- Property 1: Tokenized output contains only lowercase words

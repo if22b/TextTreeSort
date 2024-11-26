@@ -3,9 +3,8 @@ module RBTree (buildTree, inOrder) where
 data Color = Red | Black deriving (Show, Eq)
 data RBTree a = Nil | Node Color (RBTree a) a (RBTree a) deriving (Show)
 
--- Function to insert the element x into the tree
 insertString :: (Ord a) => RBTree a -> a -> RBTree a
-insertString Nil x = Node Red Nil x Nil  -- Empty tree: create a new red node
+insertString Nil x = Node Red Nil x Nil  -- empty tree: create a new red node
 insertString (Node color left val right) x
   | x < val = balance color (insertString left x) val right   -- insert left
   | x > val = balance color left val (insertString right x)   -- insert right
