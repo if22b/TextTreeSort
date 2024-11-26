@@ -5,6 +5,7 @@ import RBTree ( inOrder, buildTree )
 import Helperfunctions
     ( readFileContents,
       parallelTokenize,
+      standardTokenize,
       writeSortedWords,
       measureTimeOfFunction,
       printMessage )
@@ -12,7 +13,7 @@ import Helperfunctions
 processFile :: FilePath -> IO ()
 processFile filePath = do
     content <- readFileContents filePath
-    writeSortedWords "output.txt" (inOrder (buildTree (parallelTokenize content)))
+    writeSortedWords "output.txt" (inOrder (buildTree (standardTokenize content)))
     printMessage "Done!"
 
 main :: IO ()
